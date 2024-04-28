@@ -1,13 +1,131 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
 }
+
+body {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.spacetour__navbar {
+  position: fixed;
+  width: 100%;
+  height: 8.7rem;
+  top: 3.7rem;
+  padding: 0 0 0 4.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.spacetour__navbar-line {
+  position: absolute;
+  width: 33%;
+  height: 0.3px;
+  background-color: rgba(128, 128, 128, 0.341);
+  transform: translateX(10rem);
+  z-index: 1;
+}
+.spacetour__navbar-options {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  list-style: none;
+  width: 60%;
+  height: 8.7rem;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px) brightness(125%);
+  color: white;
+  gap: 4.1rem;
+  padding: 0 0 0 10rem;
+}
+.spacetour__navbar-option {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  height: 100%;
+}
+.spacetour__navbar-option span:last-child {
+  display: inline-block;
+  margin-left: 0.84rem;
+}
+.spacetour__navbar-log-box {
+  width: 4.5rem;
+}
+.spacetour__navbar-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.underlined {
+  border-bottom: 3px solid white;
+}
+
+.home {
+  background-image: url(/public/assets/home/background-home-desktop.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+}
+
+.home_section {
+  position: absolute;
+  top: 42%;
+  left: 11%;
+  height: 32.13rem;
+  min-height: 32.13rem;
+  min-width: 80%;
+}
+
+.article {
+  width: 41rem;
+  min-height: 100%;
+}
+
+.article__heading-5 {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 4.75px;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: hsl(231, 77%, 90%);
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.article__heading-1 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14rem;
+  color: white;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.article__para-1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: hsl(231, 77%, 90%);
+  text-align: start;
+  width: 96%;
+  word-spacing: 1px;
+  height: auto;
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=index.css.map */

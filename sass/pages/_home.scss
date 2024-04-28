@@ -1,0 +1,21 @@
+.home {
+  background-image: url(/public/assets/home/background-home-desktop.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+}
+.home_section {
+  position: absolute;
+  top: 42%;
+  left: 11%;
+  height: 32.13rem;
+  min-height: 32.13rem;
+  min-width: 80%;
+}
+.article {
+  width: 41rem;
+  min-height: 100%;
+}
