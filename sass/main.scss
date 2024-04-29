@@ -5,3 +5,5 @@
 @import "layout/navbar";
 @import "pages/home";
 @import "base/typography";
+
+@import "base/mediaqery"; // always should be in bottom of all to override the orginal property

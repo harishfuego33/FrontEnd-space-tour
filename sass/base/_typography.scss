@@ -2,30 +2,31 @@
   &__heading-5 {
     font-family: "Barlow Condensed", sans-serif;
     letter-spacing: 4.75px;
-    font-size: 2.9rem;
+    font-size: var(--heading-5);
     font-weight: 400;
-    color: $primary-light-blue;
-    margin-bottom: 2rem;
+    color: var(--primary-light-blue);
     width: 100%;
+    text-align: start;
   }
   &__heading-1 {
     font-family: "Bellefair", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 14rem;
+    font-size: var(--heading-2);
     color: white;
-    margin-bottom: 2rem;
+    text-align: start;
     width: 100%;
   }
   &__para-1 {
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 1.8rem;
+    font-size: var(--sentence);
     font-weight: 300;
-    color: $primary-light-blue;
-    text-align: start;
-    width: 96%;
-    word-spacing: 1px;
+    color: white;
+    letter-spacing: normal;
+    word-spacing: 2px;
     height: auto;
-    line-height: 1.6;
+    line-height: 1.5;
+    text-align: start;
+    margin-inline: 1rem;
   }
 }

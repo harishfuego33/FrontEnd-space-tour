@@ -21,7 +21,7 @@ function Section() {
         </p>
       </article>
       <div className="Explore">
-        {/* <h1 className="article__heading-1">SPACE</h1> */}
+        <h3 className="Explore__title">Explore</h3>
       </div>
     </section>
   );

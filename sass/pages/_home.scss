@@ -1,21 +1,60 @@
 .home {
   background-image: url(/public/assets/home/background-home-desktop.jpg);
-  min-height: 100vh;
-  width: 100%;
-  background-size: 100%;
-  background-position: center;
   background-repeat: no-repeat;
-  overflow-y: auto;
+  background-size: cover;
+  background-position: bottom center;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
 }
 .home_section {
-  position: absolute;
-  top: 42%;
-  left: 11%;
-  height: 32.13rem;
-  min-height: 32.13rem;
-  min-width: 80%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto auto;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  gap: 2rem;
 }
 .article {
   width: 41rem;
-  min-height: 100%;
+  grid-column: 1;
+}
+.Explore {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2;
+  height: 23.94rem;
+  width: 23.94rem;
+  border-radius: 50%;
+  outline-width: 0; /* Initial outline width */
+  transition: transform 0.2s ease-in-out;
+  background-color: var(--primary-white);
+  cursor: pointer;
+  &__title {
+    font-family: "Bellefair", serif;
+    font-size: var(--heading-4);
+    font-weight: 200;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, 0.547);
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.2s ease-in-out;
+  }
+  &:hover::after {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
 }

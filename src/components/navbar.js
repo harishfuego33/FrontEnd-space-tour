@@ -12,6 +12,11 @@ export default function Navbar() {
         />
       </div>
       <span className="spacetour__navbar-line"></span>
+      <img
+        src="./assets/shared/icon-hamburger.svg"
+        alt="icon-hamburger"
+        className="spacetour__navbar-hamburger"
+      />
       <li className="spacetour__navbar-options">
         <ul
           className={`spacetour__navbar-option ${

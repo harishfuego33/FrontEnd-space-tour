@@ -1,53 +1,60 @@
 .spacetour__navbar {
-  position: fixed;
   width: 100%;
-  height: 8.7rem;
-  top: 3.7rem;
-  padding: 0 0 0 4.8rem;
+  height: 15.7rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  margin-bottom: 3.7rem;
+  gap: 1rem;
+  position: relative;
   &-line {
-    position: absolute;
-    width: 33%;
+    width: 30%;
+    min-width: 4rem;
     height: 0.3px;
     background-color: rgba(128, 128, 128, 0.341);
-    transform: translateX(10rem);
-    z-index: 1;
+    transform: translateX(4rem);
+    z-index: 2;
   }
   &-options {
     font-family: "Barlow Condensed", sans-serif;
     letter-spacing: 2.7px;
     list-style: none;
-    width: 60%;
     height: 8.7rem;
     display: flex;
     align-items: center;
-    backdrop-filter: blur(10px) brightness(125%);
-    color: $primary-white;
+    justify-content: space-evenly;
+    backdrop-filter: blur(10px) brightness(90%);
+    color: var(--primary-white);
     gap: 4.1rem;
-    padding: 0 0 0 10rem;
+    margin: 3.7rem 0;
+    padding-inline: 10rem;
+    flex-shrink: 1;
   }
   &-option {
     display: flex;
     align-items: center;
-    font-size: $sentence;
+    font-size: var(--sentence);
     cursor: pointer;
     border-bottom: 3px solid transparent;
     height: 100%;
+    & span:first-child {
+      font-weight: 700;
+    }
     & span:last-child {
       display: inline-block;
       margin-left: 0.84rem;
     }
   }
   &-log-box {
+    // display: block;
     width: 4.5rem;
+    height: 4.5rem;
+    margin: 2rem 4rem;
   }
-  &-logo {
-    width: 100%;
-    height: 100%;
+  &-hamburger {
+    display: none;
+    margin: 2rem;
   }
 }
 .underlined {

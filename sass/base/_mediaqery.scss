@@ -1,0 +1,75 @@
+@media only screen and (max-width: 800px) {
+  .home {
+    background-image: url(/public/assets/home/background-home-tablet.jpg);
+    background-position: center center;
+  }
+  .spacetour__navbar {
+    height: 8.7rem;
+    &-line {
+      display: none;
+    }
+    &-options {
+      padding-inline: 5rem;
+      margin: 0;
+      & span:first-child {
+        display: none;
+      }
+    }
+    &-option {
+      font-size: 12px;
+    }
+    &-log-box {
+      margin: 0 2rem;
+    }
+    &-logo {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  .home_section {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10rem;
+  }
+  .article {
+    grid-area: 1 / 1 / 2 / 2;
+    place-items: initial;
+  }
+  .Explore {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  :root {
+    --heading-1: 10rem;
+    // --heading-2: 5.56rem;
+    --heading-3: 3.1136rem;
+    --heading-4: 1.7792rem;
+    --heading-5: 1.2rem;
+    --senterce: 0.88896;
+  }
+  .article {
+    &__heading-5 {
+      text-align: center;
+    }
+    &__heading-1 {
+      text-align: center;
+    }
+    &__para-1 {
+      text-align: center;
+    }
+  }
+}
+@media only screen and (max-width: 630px) {
+  .home {
+    background-image: url(/public/assets/home/background-home-mobile.jpg);
+    background-position: bottom center;
+    overflow-x: auto;
+  }
+  .spacetour__navbar {
+    &-options {
+      display: none;
+    }
+    &-hamburger {
+      display: block;
+    }
+  }
+}

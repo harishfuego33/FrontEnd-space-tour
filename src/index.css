@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-dark: hsl(230, 35%, 7%);
+  --primary-light-blue: hsl(231, 77%, 90%);
+  --primary-white: #ffff;
+  --heading-1: 15rem;
+  --heading-2: 10rem;
+  --heading-3: 5.6rem;
+  --heading-4: 3.2rem;
+  --heading-5: 2.8rem;
+  --subheading-1: 2.8rem;
+  --subheading-2: 1.4rem;
+  --sentence: 1.6rem;
+}
+
 *,
 *::before,
 *::after {
@@ -14,49 +28,53 @@ html {
 
 body {
   box-sizing: border-box;
-  position: relative;
+  min-width: 100vh;
 }
 
 .spacetour__navbar {
-  position: fixed;
   width: 100%;
-  height: 8.7rem;
-  top: 3.7rem;
-  padding: 0 0 0 4.8rem;
+  height: 15.7rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  margin-bottom: 3.7rem;
+  gap: 1rem;
+  position: relative;
 }
 .spacetour__navbar-line {
-  position: absolute;
-  width: 33%;
+  width: 30%;
+  min-width: 4rem;
   height: 0.3px;
   background-color: rgba(128, 128, 128, 0.341);
-  transform: translateX(10rem);
-  z-index: 1;
+  transform: translateX(4rem);
+  z-index: 2;
 }
 .spacetour__navbar-options {
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 2.7px;
   list-style: none;
-  width: 60%;
   height: 8.7rem;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(10px) brightness(125%);
-  color: white;
+  justify-content: space-evenly;
+  backdrop-filter: blur(10px) brightness(90%);
+  color: var(--primary-white);
   gap: 4.1rem;
-  padding: 0 0 0 10rem;
+  margin: 3.7rem 0;
+  padding-inline: 10rem;
+  flex-shrink: 1;
 }
 .spacetour__navbar-option {
   display: flex;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: var(--sentence);
   cursor: pointer;
   border-bottom: 3px solid transparent;
   height: 100%;
+}
+.spacetour__navbar-option span:first-child {
+  font-weight: 700;
 }
 .spacetour__navbar-option span:last-child {
   display: inline-block;
@@ -64,10 +82,12 @@ body {
 }
 .spacetour__navbar-log-box {
   width: 4.5rem;
+  height: 4.5rem;
+  margin: 2rem 4rem;
 }
-.spacetour__navbar-logo {
-  width: 100%;
-  height: 100%;
+.spacetour__navbar-hamburger {
+  display: none;
+  margin: 2rem;
 }
 
 .underlined {
@@ -76,56 +96,168 @@ body {
 
 .home {
   background-image: url(/public/assets/home/background-home-desktop.jpg);
-  min-height: 100vh;
-  width: 100%;
-  background-size: 100%;
-  background-position: center;
   background-repeat: no-repeat;
-  overflow-y: auto;
+  background-size: cover;
+  background-position: bottom center;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
 }
 
 .home_section {
-  position: absolute;
-  top: 42%;
-  left: 11%;
-  height: 32.13rem;
-  min-height: 32.13rem;
-  min-width: 80%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto auto;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  gap: 2rem;
 }
 
 .article {
   width: 41rem;
-  min-height: 100%;
+  grid-column: 1;
+}
+
+.Explore {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2;
+  height: 23.94rem;
+  width: 23.94rem;
+  border-radius: 50%;
+  outline-width: 0; /* Initial outline width */
+  transition: transform 0.2s ease-in-out;
+  background-color: var(--primary-white);
+  cursor: pointer;
+}
+.Explore__title {
+  font-family: "Bellefair", serif;
+  font-size: var(--heading-4);
+  font-weight: 200;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.Explore::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.547);
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.2s ease-in-out;
+}
+.Explore:hover::after {
+  transform: scale(1.5);
+  transform-origin: center;
 }
 
 .article__heading-5 {
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 4.75px;
-  font-size: 2.9rem;
+  font-size: var(--heading-5);
   font-weight: 400;
-  color: hsl(231, 77%, 90%);
-  margin-bottom: 2rem;
+  color: var(--primary-light-blue);
   width: 100%;
+  text-align: start;
 }
 .article__heading-1 {
   font-family: "Bellefair", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 14rem;
+  font-size: var(--heading-2);
   color: white;
-  margin-bottom: 2rem;
+  text-align: start;
   width: 100%;
 }
 .article__para-1 {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 1.8rem;
+  font-size: var(--sentence);
   font-weight: 300;
-  color: hsl(231, 77%, 90%);
-  text-align: start;
-  width: 96%;
-  word-spacing: 1px;
+  color: white;
+  letter-spacing: normal;
+  word-spacing: 2px;
   height: auto;
-  line-height: 1.6;
+  line-height: 1.5;
+  text-align: start;
+  margin-inline: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .home {
+    background-image: url(/public/assets/home/background-home-tablet.jpg);
+    background-position: center center;
+  }
+  .spacetour__navbar {
+    height: 8.7rem;
+  }
+  .spacetour__navbar-line {
+    display: none;
+  }
+  .spacetour__navbar-options {
+    padding-inline: 5rem;
+    margin: 0;
+  }
+  .spacetour__navbar-options span:first-child {
+    display: none;
+  }
+  .spacetour__navbar-option {
+    font-size: 12px;
+  }
+  .spacetour__navbar-log-box {
+    margin: 0 2rem;
+  }
+  .spacetour__navbar-logo {
+    height: 4rem;
+    width: 4rem;
+  }
+  .home_section {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10rem;
+  }
+  .article {
+    grid-area: 1/1/2/2;
+    place-items: initial;
+  }
+  .Explore {
+    grid-area: 2/1/3/2;
+  }
+  :root {
+    --heading-1: 10rem;
+    --heading-3: 3.1136rem;
+    --heading-4: 1.7792rem;
+    --heading-5: 1.2rem;
+    --senterce: 0.88896;
+  }
+  .article__heading-5 {
+    text-align: center;
+  }
+  .article__heading-1 {
+    text-align: center;
+  }
+  .article__para-1 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .home {
+    background-image: url(/public/assets/home/background-home-mobile.jpg);
+    background-position: bottom center;
+    overflow-x: auto;
+  }
+  .spacetour__navbar-options {
+    display: none;
+  }
+  .spacetour__navbar-hamburger {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
