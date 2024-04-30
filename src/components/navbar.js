@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+// import styled from "styled-components";
 
 export default function Navbar() {
   const [active, setActive] = useState("HOME");
   const [hamburger, setHamburger] = useState(true);
+  const styleLink = {
+    color: "white",
+    textDecoration: "none",
+  };
   return (
     <>
       <nav className="spacetour__navbar">
@@ -31,8 +38,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("HOME")}
           >
-            <span>00</span>
-            <span>HOME</span>
+            <Link style={styleLink} to="/">
+              <span>00</span>
+              <span>HOME</span>
+            </Link>
           </ul>
           <ul
             className={`spacetour__navbar-option ${
@@ -40,8 +49,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("DESTINATION")}
           >
-            <span>01</span>
-            <span>DESTINATION</span>
+            <Link style={styleLink} to="/destination">
+              <span>01</span>
+              <span>DESTINATION</span>
+            </Link>
           </ul>
           <ul
             className={`spacetour__navbar-option ${
@@ -49,8 +60,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("CREW")}
           >
-            <span>02</span>
-            <span>CREW</span>
+            <Link style={styleLink} to="/crew">
+              <span>02</span>
+              <span>CREW</span>
+            </Link>
           </ul>
           <ul
             className={`spacetour__navbar-option ${
@@ -58,8 +71,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("TECHNOLOGY")}
           >
-            <span>03</span>
-            <span>TECHNOLOGY</span>
+            <Link style={styleLink} to="/technology">
+              <span>03</span>
+              <span>TECHNOLOGY</span>
+            </Link>
           </ul>
         </li>
       </nav>
@@ -74,8 +89,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("HOME")}
           >
-            <span>00</span>
-            <span>HOME</span>
+            <Link style={styleLink} to="/">
+              <span>00</span>
+              <span>HOME</span>
+            </Link>
           </ul>
           <ul
             className={`hamburger__box-option ${
@@ -83,8 +100,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("DESTINATION")}
           >
-            <span>01</span>
-            <span>DESTINATION</span>
+            <Link style={styleLink} to="/destination">
+              <span>01</span>
+              <span>DESTINATION</span>
+            </Link>
           </ul>
           <ul
             className={`hamburger__box-option ${
@@ -92,8 +111,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("CREW")}
           >
-            <span>02</span>
-            <span>CREW</span>
+            <Link style={styleLink} to="/crew">
+              <span>02</span>
+              <span>CREW</span>
+            </Link>
           </ul>
           <ul
             className={`hamburger__box-option ${
@@ -101,8 +122,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("TECHNOLOGY")}
           >
-            <span>03</span>
-            <span>TECHNOLOGY</span>
+            <Link style={styleLink} to="/technology">
+              <span>03</span>
+              <span>TECHNOLOGY</span>
+            </Link>
           </ul>
         </li>
       </div>
