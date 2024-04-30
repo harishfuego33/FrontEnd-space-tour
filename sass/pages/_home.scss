@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .home {
@@ -9,8 +10,10 @@ body {
   background-size: cover;
   min-width: 320px;
   min-height: 100vh;
-  display: flex;
-  justify-content: flex-end;
+  overflow: hidden; /* fix boucing on the bottom */
+
+  // display: flex;
+  // justify-content: flex-end;
 }
 
 .home_section {
