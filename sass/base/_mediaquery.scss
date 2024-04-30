@@ -61,7 +61,6 @@
     }
     &__para-1 {
       text-align: center;
-      // width: 80px;
     }
   }
 }
@@ -105,5 +104,8 @@
       text-align: center;
       word-wrap: normal;
     }
+  }
+  .hamburger__box {
+    display: flex;
   }
 }

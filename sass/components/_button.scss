@@ -1,0 +1,25 @@
+.hamburger__box {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  backdrop-filter: blur(10px) brightness(150%);
+  right: 0;
+  display: none;
+  padding: 10rem 0 10rem 3rem;
+  transform: translateX(35rem);
+  transition: transform 0.3s;
+  &-options {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+  }
+  &-option {
+    font-size: var(--heading-4);
+    color: var(--primary-white);
+    cursor: pointer;
+    & span:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

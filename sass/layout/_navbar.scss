@@ -7,7 +7,6 @@
   align-items: center;
   margin-bottom: 3.7rem;
   gap: 1rem;
-  position: relative;
   min-width: 320px;
   &-line {
     width: 30%;
@@ -25,6 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    align-items: center;
     backdrop-filter: blur(10px) brightness(150%);
     color: var(--primary-white);
     gap: 4.1rem;
@@ -33,12 +33,11 @@
     flex-shrink: 1;
   }
   &-option {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    padding: 3.5rem 0;
     font-size: var(--sentence);
     cursor: pointer;
     border-bottom: 3px solid transparent;
-    height: 100%;
     & span:first-child {
       font-weight: 700;
     }
@@ -54,12 +53,10 @@
   }
   &-hamburger-box {
     cursor: pointer;
+    z-index: 10;
   }
   &-hamburger {
     display: none;
     margin: 2rem;
   }
-}
-.underlined {
-  border-bottom: 3px solid white;
 }

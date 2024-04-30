@@ -10,7 +10,16 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr;
   overflow-x: hidden;
+  position: relative;
 }
+// .home {
+//   min-width: 320px;
+//   min-height: 100vh;
+//   display: grid;
+//   grid-template-rows: min-content 1fr;
+//   overflow-x: hidden;
+// }
+
 .home_section {
   text-align: center;
   display: grid;
