@@ -1,10 +1,10 @@
 import Navbar from "./components/navbar";
 export default function App() {
   return (
-    <div className="home">
+    <>
       <Navbar />
       <Section />
-    </div>
+    </>
   );
 }
 function Section() {

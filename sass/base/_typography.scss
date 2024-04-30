@@ -1,4 +1,5 @@
 .article {
+  min-width: 250px;
   &__heading-5 {
     font-family: "Barlow Condensed", sans-serif;
     letter-spacing: 4.75px;
@@ -12,7 +13,7 @@
     font-family: "Bellefair", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: var(--heading-2);
+    font-size: var(--heading-1);
     color: white;
     text-align: start;
     width: 100%;
@@ -20,13 +21,11 @@
   &__para-1 {
     font-family: "Barlow Condensed", sans-serif;
     font-size: var(--sentence);
-    font-weight: 300;
-    color: white;
-    letter-spacing: normal;
-    word-spacing: 2px;
-    height: auto;
+    font-weight: 200;
+    color: var(--primary-light-blue);
     line-height: 1.5;
     text-align: start;
-    margin-inline: 1rem;
+    width: 100%;
+    min-width: 250px;
   }
 }

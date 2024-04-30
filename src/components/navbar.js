@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [active, setActive] = useState("HOME");
+  const [hamburger, setHamburger] = useState(true);
   return (
     <nav className="spacetour__navbar">
       <div className="spacetour__navbar-log-box">
@@ -12,11 +13,16 @@ export default function Navbar() {
         />
       </div>
       <span className="spacetour__navbar-line"></span>
-      <img
-        src="./assets/shared/icon-hamburger.svg"
-        alt="icon-hamburger"
-        className="spacetour__navbar-hamburger"
-      />
+      <div className="spacetour__navbar-hamburger-box">
+        <img
+          src={`./assets/shared/${
+            hamburger === true ? "icon-hamburger" : "icon-close"
+          }.svg`}
+          alt="icon-hamburger"
+          className="spacetour__navbar-hamburger"
+          onClick={() => setHamburger(!hamburger)}
+        />
+      </div>
       <li className="spacetour__navbar-options">
         <ul
           className={`spacetour__navbar-option ${

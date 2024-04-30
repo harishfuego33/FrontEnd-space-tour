@@ -8,6 +8,7 @@
   margin-bottom: 3.7rem;
   gap: 1rem;
   position: relative;
+  min-width: 320px;
   &-line {
     width: 30%;
     min-width: 4rem;
@@ -24,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    backdrop-filter: blur(10px) brightness(90%);
+    backdrop-filter: blur(10px) brightness(150%);
     color: var(--primary-white);
     gap: 4.1rem;
     margin: 3.7rem 0;
@@ -47,10 +48,12 @@
     }
   }
   &-log-box {
-    // display: block;
     width: 4.5rem;
     height: 4.5rem;
     margin: 2rem 4rem;
+  }
+  &-hamburger-box {
+    cursor: pointer;
   }
   &-hamburger {
     display: none;
