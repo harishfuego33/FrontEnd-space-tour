@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Outlet } from "react-router-dom";
-// import styled from "styled-components";
 
 export default function Navbar() {
   const [active, setActive] = useState("HOME");
@@ -12,6 +10,57 @@ export default function Navbar() {
   };
   return (
     <>
+      <div
+        className={"hamburger__box ff-barlow-sans"}
+        style={hamburger === false ? { transform: "translateX(0)" } : {}}
+      >
+        <li className="hamburger__box-options">
+          <ul
+            className={`hamburger__box-option ${
+              active === "HOME" ? "underlined__right" : ""
+            }`}
+            onClick={() => setActive("HOME")}
+          >
+            <Link style={styleLink} to="/">
+              <span>00</span>
+              <span>HOME</span>
+            </Link>
+          </ul>
+          <ul
+            className={`hamburger__box-option ${
+              active === "DESTINATION" ? "underlined__right" : ""
+            }`}
+            onClick={() => setActive("DESTINATION")}
+          >
+            <Link style={styleLink} to="/destination">
+              <span>01</span>
+              <span>DESTINATION</span>
+            </Link>
+          </ul>
+          <ul
+            className={`hamburger__box-option ${
+              active === "CREW" ? "underlined__right" : ""
+            }`}
+            onClick={() => setActive("CREW")}
+          >
+            <Link style={styleLink} to="/crew">
+              <span>02</span>
+              <span>CREW</span>
+            </Link>
+          </ul>
+          <ul
+            className={`hamburger__box-option ${
+              active === "TECHNOLOGY" ? "underlined__right" : ""
+            }`}
+            onClick={() => setActive("TECHNOLOGY")}
+          >
+            <Link style={styleLink} to="/technology">
+              <span>03</span>
+              <span>TECHNOLOGY</span>
+            </Link>
+          </ul>
+        </li>
+      </div>
       <nav className="spacetour__navbar">
         <div className="spacetour__navbar-log-box">
           <img
@@ -78,57 +127,6 @@ export default function Navbar() {
           </ul>
         </li>
       </nav>
-      <div
-        className={"hamburger__box ff-barlow-sans"}
-        style={hamburger === false ? { transform: "translateX(0)" } : {}}
-      >
-        <li className="hamburger__box-options">
-          <ul
-            className={`hamburger__box-option ${
-              active === "HOME" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("HOME")}
-          >
-            <Link style={styleLink} to="/">
-              <span>00</span>
-              <span>HOME</span>
-            </Link>
-          </ul>
-          <ul
-            className={`hamburger__box-option ${
-              active === "DESTINATION" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("DESTINATION")}
-          >
-            <Link style={styleLink} to="/destination">
-              <span>01</span>
-              <span>DESTINATION</span>
-            </Link>
-          </ul>
-          <ul
-            className={`hamburger__box-option ${
-              active === "CREW" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("CREW")}
-          >
-            <Link style={styleLink} to="/crew">
-              <span>02</span>
-              <span>CREW</span>
-            </Link>
-          </ul>
-          <ul
-            className={`hamburger__box-option ${
-              active === "TECHNOLOGY" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("TECHNOLOGY")}
-          >
-            <Link style={styleLink} to="/technology">
-              <span>03</span>
-              <span>TECHNOLOGY</span>
-            </Link>
-          </ul>
-        </li>
-      </div>
     </>
   );
 }

@@ -8,10 +8,16 @@
 
 html {
   font-size: 62.5%;
+  overflow: hidden; /* fix boucing on the bottom */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
 }
 
 body {
+  // position: relative;
   box-sizing: border-box;
-  min-width: 100vh;
-  background-size: cover;
+  // min-width: 100vh;
+  // background-size: cover;
 }

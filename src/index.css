@@ -24,16 +24,19 @@
 
 html {
   font-size: 62.5%;
+  overflow: hidden; /* fix boucing on the bottom */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
 }
 
 body {
   box-sizing: border-box;
-  min-width: 100vh;
-  background-size: cover;
 }
 
 .spacetour__navbar {
-  width: 100%;
+  width: 100vw;
   height: 15.7rem;
   display: flex;
   flex-direction: row;
@@ -42,9 +45,11 @@ body {
   margin-bottom: 3.7rem;
   gap: 1rem;
   min-width: 320px;
+  position: fixed;
+  z-index: 2;
 }
 .spacetour__navbar-line {
-  width: 30%;
+  width: 30vw;
   min-width: 4rem;
   height: 0.3px;
   background-color: rgba(128, 128, 128, 0.341);
@@ -62,13 +67,12 @@ body {
   align-items: center;
   backdrop-filter: blur(10px) brightness(150%);
   color: var(--primary-white);
-  gap: 4.1rem;
+  gap: 4rem;
   margin: 3.7rem 0;
-  padding-inline: 10rem;
-  flex-shrink: 1;
+  padding-inline: 5rem;
 }
 .spacetour__navbar-option {
-  display: inline-block;
+  display: block;
   padding: 3.5rem 0;
   font-size: var(--sentence);
   cursor: pointer;
@@ -96,19 +100,18 @@ body {
 }
 
 body {
-  background-image: url(/public/assets/home/background-home-desktop.jpg);
-  background-repeat: no-repeat;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-#root {
+.home {
+  background-image: url(/public/assets/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   min-width: 320px;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  overflow-x: hidden;
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .home_section {
@@ -238,9 +241,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  body {
+  .home {
     background-image: url(/public/assets/home/background-home-tablet.jpg);
     background-position: center center;
+    width: 100vw;
   }
   .spacetour__navbar {
     height: 8.7rem;
@@ -298,10 +302,11 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
-  body {
+  .home {
     background-image: url(/public/assets/home/background-home-mobile.jpg);
     background-position: bottom center;
     background-size: cover;
+    width: 100vw;
   }
   .spacetour__navbar-options {
     display: none;

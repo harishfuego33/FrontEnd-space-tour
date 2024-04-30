@@ -1,5 +1,6 @@
 .spacetour__navbar {
-  width: 100%;
+  // width: 100%;
+  width: 100vw;
   height: 15.7rem;
   display: flex;
   flex-direction: row;
@@ -8,8 +9,10 @@
   margin-bottom: 3.7rem;
   gap: 1rem;
   min-width: 320px;
+  position: fixed;
+  z-index: 2;
   &-line {
-    width: 30%;
+    width: 30vw;
     min-width: 4rem;
     height: 0.3px;
     background-color: rgba(128, 128, 128, 0.341);
@@ -27,13 +30,14 @@
     align-items: center;
     backdrop-filter: blur(10px) brightness(150%);
     color: var(--primary-white);
-    gap: 4.1rem;
+    gap: 4rem;
     margin: 3.7rem 0;
-    padding-inline: 10rem;
-    flex-shrink: 1;
+    padding-inline: 5rem;
+    // flex-shrink: 1;
   }
   &-option {
-    display: inline-block;
+    display: block;
+
     padding: 3.5rem 0;
     font-size: var(--sentence);
     cursor: pointer;

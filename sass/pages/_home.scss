@@ -1,24 +1,17 @@
 body {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
   background-image: url(/public/assets/home/background-home-desktop.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
 }
-#root {
-  min-width: 320px;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  overflow-x: hidden;
-  position: relative;
-}
-// .home {
-//   min-width: 320px;
-//   min-height: 100vh;
-//   display: grid;
-//   grid-template-rows: min-content 1fr;
-//   overflow-x: hidden;
-// }
 
 .home_section {
   text-align: center;
@@ -27,6 +20,7 @@ body {
   grid-template-columns: auto auto;
   padding-inline: 1rem;
   padding-bottom: 4rem;
+  // margin-top: 15.7rem;
   width: 100%;
   gap: 2rem;
   min-width: 320px;
