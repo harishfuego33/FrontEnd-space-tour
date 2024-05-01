@@ -10,7 +10,7 @@ function Section() {
   const [active, setActive] = useState("HOME");
   return (
     <main className="destination_section margin-top-19">
-      <h1 className="article__heading-5 item-1 ff-barlow-con-sans">
+      <h1 className="numbered-title item-1 ff-barlow-con-sans">
         <span className="ff-weigth-700 light-gray">01</span> PICK YOUR
         DESTINATION
       </h1>

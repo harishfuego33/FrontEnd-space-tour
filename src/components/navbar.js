@@ -70,7 +70,9 @@ export default function Navbar() {
             className="spacetour__navbar-logo"
           />
         </div>
+        {/*  */}
         <span className="spacetour__navbar-line"></span>
+        {/*  */}
         <div className="spacetour__navbar-hamburger-box">
           <img
             src={`./assets/shared/${

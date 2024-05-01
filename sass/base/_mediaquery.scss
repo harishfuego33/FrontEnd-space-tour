@@ -63,6 +63,13 @@
       margin: 0 auto;
     }
   }
+
+  .destination_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 @media only screen and (max-width: 500px) {
   .home {
