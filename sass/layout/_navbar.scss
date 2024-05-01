@@ -10,7 +10,7 @@
   gap: 1rem;
   min-width: 320px;
   position: fixed;
-  z-index: 2;
+  z-index: 1001;
   &-line {
     // position: absolute;
     width: 30%;
@@ -58,7 +58,6 @@
   }
   &-hamburger-box {
     cursor: pointer;
-    z-index: 1001;
   }
   &-hamburger {
     display: none;

@@ -46,7 +46,7 @@ body {
   gap: 1rem;
   min-width: 320px;
   position: fixed;
-  z-index: 2;
+  z-index: 1001;
 }
 .spacetour__navbar-line {
   width: 30%;
@@ -94,7 +94,6 @@ body {
 }
 .spacetour__navbar-hamburger-box {
   cursor: pointer;
-  z-index: 1001;
 }
 .spacetour__navbar-hamburger {
   display: none;
@@ -213,7 +212,7 @@ body {
   padding: 10rem 0 10rem 3rem;
   transform: translateX(35rem);
   transition: transform 0.3s;
-  z-index: 1000;
+  z-index: 100;
 }
 .hamburger__box-options {
   display: flex;
