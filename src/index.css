@@ -68,7 +68,6 @@ body {
   justify-content: space-evenly;
   backdrop-filter: blur(10px) brightness(150%);
   color: var(--primary-white);
-  gap: 4rem;
   margin: 3.7rem 0;
   padding-inline: 5rem;
 }
@@ -133,7 +132,7 @@ body {
 
 .article {
   width: 41rem;
-  min-width: px;
+  min-width: 260px;
   grid-column: 1;
 }
 
