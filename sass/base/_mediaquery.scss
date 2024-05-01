@@ -33,7 +33,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 12.4rem;
   }
   .article {
     grid-area: 1 / 1 / 2 / 2;
@@ -53,12 +52,15 @@
   .article {
     &__heading-5 {
       text-align: center;
+      margin-bottom: 2rem;
     }
     &__heading-1 {
       text-align: center;
+      margin-bottom: 1.5rem;
     }
     &__para-1 {
       text-align: center;
+      margin: 0 auto;
     }
   }
 }
@@ -68,6 +70,9 @@
     background-position: bottom center;
     background-size: cover;
     width: 100vw;
+  }
+  .home_section {
+    margin-top: 12.4rem;
   }
   .spacetour__navbar {
     &-options {
@@ -102,7 +107,6 @@
     }
     &__para-1 {
       text-align: center;
-      margin-inline: 1rem;
       width: 290px;
     }
   }

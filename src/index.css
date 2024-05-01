@@ -68,6 +68,7 @@ body {
   justify-content: space-evenly;
   backdrop-filter: blur(10px) brightness(150%);
   color: var(--primary-white);
+  gap: 4rem;
   margin: 3.7rem 0;
   padding-inline: 5rem;
 }
@@ -279,7 +280,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 12.4rem;
   }
   .article {
     grid-area: 1/1/2/2;
@@ -298,12 +298,15 @@ body {
   }
   .article__heading-5 {
     text-align: center;
+    margin-bottom: 2rem;
   }
   .article__heading-1 {
     text-align: center;
+    margin-bottom: 1.5rem;
   }
   .article__para-1 {
     text-align: center;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -312,6 +315,9 @@ body {
     background-position: bottom center;
     background-size: cover;
     width: 100vw;
+  }
+  .home_section {
+    margin-top: 12.4rem;
   }
   .spacetour__navbar-options {
     display: none;
@@ -344,7 +350,6 @@ body {
   }
   .article__para-1 {
     text-align: center;
-    margin-inline: 1rem;
     width: 290px;
   }
   .hamburger__box {
