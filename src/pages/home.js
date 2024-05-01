@@ -1,6 +1,10 @@
 // import background from
 function Home() {
-  return <div className="home">{/* <Section />; */}</div>;
+  return (
+    <div className="home">
+      <Section />;
+    </div>
+  );
 }
 function Section() {
   return (

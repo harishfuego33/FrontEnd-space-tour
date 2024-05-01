@@ -49,22 +49,23 @@ body {
   z-index: 2;
 }
 .spacetour__navbar-line {
-  width: 30vw;
+  width: 30%;
   min-width: 4rem;
   height: 0.3px;
   background-color: rgba(128, 128, 128, 0.341);
   transform: translateX(4rem);
   z-index: 2;
+  flex-shrink: 2;
 }
 .spacetour__navbar-options {
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 2.7px;
+  width: 70vw;
   list-style: none;
   height: 8.7rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  align-items: center;
   backdrop-filter: blur(10px) brightness(150%);
   color: var(--primary-white);
   gap: 4rem;
@@ -73,6 +74,7 @@ body {
 }
 .spacetour__navbar-option {
   display: block;
+  min-width: max-content;
   padding: 3.5rem 0;
   font-size: var(--sentence);
   cursor: pointer;
@@ -112,6 +114,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden; /* fix boucing on the bottom */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .home_section {
@@ -121,6 +125,7 @@ body {
   grid-template-columns: auto auto;
   padding-inline: 1rem;
   padding-bottom: 4rem;
+  margin-top: 15.7rem;
   width: 100%;
   gap: 2rem;
   min-width: 320px;

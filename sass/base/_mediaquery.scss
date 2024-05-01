@@ -33,13 +33,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-
-    // padding: 0 8rem 4rem;
   }
   .article {
     grid-area: 1 / 1 / 2 / 2;
     place-items: center;
-    // width: ;
   }
   .Explore {
     grid-area: 2 / 1 / 3 / 2;

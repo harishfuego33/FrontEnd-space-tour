@@ -21,10 +21,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("HOME")}
           >
-            <Link style={styleLink} to="/">
-              <span>00</span>
-              <span>HOME</span>
-            </Link>
+            {/* <Link style={styleLink} to="/"> */}
+            <span>00</span>
+            <span>HOME</span>
+            {/* </Link> */}
           </ul>
           <ul
             className={`hamburger__box-option ${
@@ -32,10 +32,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("DESTINATION")}
           >
-            <Link style={styleLink} to="/destination">
-              <span>01</span>
-              <span>DESTINATION</span>
-            </Link>
+            {/* <Link style={styleLink} to="/destination"> */}
+            <span>01</span>
+            <span>DESTINATION</span>
+            {/* </Link> */}
           </ul>
           <ul
             className={`hamburger__box-option ${
@@ -43,10 +43,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("CREW")}
           >
-            <Link style={styleLink} to="/crew">
-              <span>02</span>
-              <span>CREW</span>
-            </Link>
+            {/* <Link style={styleLink} to="/crew"> */}
+            <span>02</span>
+            <span>CREW</span>
+            {/* </Link> */}
           </ul>
           <ul
             className={`hamburger__box-option ${
@@ -54,10 +54,10 @@ export default function Navbar() {
             }`}
             onClick={() => setActive("TECHNOLOGY")}
           >
-            <Link style={styleLink} to="/technology">
-              <span>03</span>
-              <span>TECHNOLOGY</span>
-            </Link>
+            {/* <Link style={styleLink} to="/technology"> */}
+            <span>03</span>
+            <span>TECHNOLOGY</span>
+            {/* </Link> */}
           </ul>
         </li>
       </div>
