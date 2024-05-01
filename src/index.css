@@ -94,7 +94,7 @@ body {
 }
 .spacetour__navbar-hamburger-box {
   cursor: pointer;
-  z-index: 10;
+  z-index: 1001;
 }
 .spacetour__navbar-hamburger {
   display: none;
