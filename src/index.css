@@ -279,6 +279,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
+    margin-top: 12.4rem;
   }
   .article {
     grid-area: 1/1/2/2;
@@ -289,6 +290,7 @@ body {
   }
   :root {
     --heading-1: 13rem;
+    --heading-2: 5.56rem;
     --heading-3: 3.1136rem;
     --heading-4: 1.7792rem;
     --heading-5: 1.2rem;
@@ -296,7 +298,6 @@ body {
   }
   .article__heading-5 {
     text-align: center;
-    display: inline;
   }
   .article__heading-1 {
     text-align: center;
@@ -335,7 +336,7 @@ body {
   }
   .article__heading-5 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .article__heading-1 {
     text-align: center;
@@ -343,7 +344,8 @@ body {
   }
   .article__para-1 {
     text-align: center;
-    word-wrap: normal;
+    margin-inline: 1rem;
+    width: 290px;
   }
   .hamburger__box {
     display: flex;
