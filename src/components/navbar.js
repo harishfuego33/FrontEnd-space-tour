@@ -12,54 +12,54 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={"hamburger__box ff-barlow-sans"}
+        className={"hamburger__box ff-barlow-con-sans"}
         style={hamburger === false ? { transform: "translateX(0)" } : {}}
       >
         <li className="hamburger__box-options">
-          <ul
-            className={`hamburger__box-option ${
-              active === "HOME" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("HOME")}
-          >
-            <Link style={styleLink} to="/">
-              <span>00</span>
+          <Link style={styleLink} to="/">
+            <ul
+              className={`hamburger__box-option ${
+                active === "HOME" ? "underlined__right" : ""
+              }`}
+              onClick={() => setActive("HOME")}
+            >
+              <span className="ff-weigth-700">00</span>
               <span>HOME</span>
-            </Link>
-          </ul>
-          <ul
-            className={`hamburger__box-option ${
-              active === "DESTINATION" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("DESTINATION")}
-          >
-            <Link style={styleLink} to="/destination">
-              <span>01</span>
+            </ul>
+          </Link>
+          <Link style={styleLink} to="/destination">
+            <ul
+              className={`hamburger__box-option ${
+                active === "DESTINATION" ? "underlined__right" : ""
+              }`}
+              onClick={() => setActive("DESTINATION")}
+            >
+              <span className="ff-weigth-700">01</span>
               <span>DESTINATION</span>
-            </Link>
-          </ul>
-          <ul
-            className={`hamburger__box-option ${
-              active === "CREW" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("CREW")}
-          >
-            <Link style={styleLink} to="/crew">
-              <span>02</span>
+            </ul>
+          </Link>
+          <Link style={styleLink} to="/crew">
+            <ul
+              className={`hamburger__box-option ${
+                active === "CREW" ? "underlined__right" : ""
+              }`}
+              onClick={() => setActive("CREW")}
+            >
+              <span className="ff-weigth-700">02</span>
               <span>CREW</span>
-            </Link>
-          </ul>
-          <ul
-            className={`hamburger__box-option ${
-              active === "TECHNOLOGY" ? "underlined__right" : ""
-            }`}
-            onClick={() => setActive("TECHNOLOGY")}
-          >
-            <Link style={styleLink} to="/technology">
-              <span>03</span>
+            </ul>
+          </Link>
+          <Link style={styleLink} to="/technology">
+            <ul
+              className={`hamburger__box-option ${
+                active === "TECHNOLOGY" ? "underlined__right" : ""
+              }`}
+              onClick={() => setActive("TECHNOLOGY")}
+            >
+              <span className="ff-weigth-700">03</span>
               <span>TECHNOLOGY</span>
-            </Link>
-          </ul>
+            </ul>
+          </Link>
         </li>
       </div>
       <nav className="spacetour__navbar">
@@ -81,51 +81,51 @@ export default function Navbar() {
             onClick={() => setHamburger(!hamburger)}
           />
         </div>
-        <li className="spacetour__navbar-options">
-          <ul
-            className={`spacetour__navbar-option ${
-              active === "HOME" ? "underlined" : ""
-            }`}
-            onClick={() => setActive("HOME")}
-          >
-            <Link style={styleLink} to="/">
-              <span>00</span>
-              <span>HOME</span>
-            </Link>
-          </ul>
-          <ul
-            className={`spacetour__navbar-option ${
-              active === "DESTINATION" ? "underlined" : ""
-            }`}
-            onClick={() => setActive("DESTINATION")}
-          >
-            <Link style={styleLink} to="/destination">
-              <span>01</span>
-              <span>DESTINATION</span>
-            </Link>
-          </ul>
-          <ul
-            className={`spacetour__navbar-option ${
-              active === "CREW" ? "underlined" : ""
-            }`}
-            onClick={() => setActive("CREW")}
-          >
-            <Link style={styleLink} to="/crew">
-              <span>02</span>
-              <span>CREW</span>
-            </Link>
-          </ul>
-          <ul
-            className={`spacetour__navbar-option ${
-              active === "TECHNOLOGY" ? "underlined" : ""
-            }`}
-            onClick={() => setActive("TECHNOLOGY")}
-          >
-            <Link style={styleLink} to="/technology">
-              <span>03</span>
-              <span>TECHNOLOGY</span>
-            </Link>
-          </ul>
+        <li className="spacetour__navbar-options ff-barlow-con-sans">
+          <Link style={styleLink} to="/">
+            <ul
+              className={`spacetour__navbar-option ${
+                active === "HOME" ? "underlined" : ""
+              }`}
+              onClick={() => setActive("HOME")}
+            >
+              <span className="ff-family-700">00</span>
+              <span className="margin-left-08">HOME</span>
+            </ul>
+          </Link>
+          <Link style={styleLink} to="/destination">
+            <ul
+              className={`spacetour__navbar-option ${
+                active === "DESTINATION" ? "underlined" : ""
+              }`}
+              onClick={() => setActive("DESTINATION")}
+            >
+              <span className="ff-family-700">01</span>
+              <span className="margin-left-08">DESTINATION</span>
+            </ul>
+          </Link>
+          <Link style={styleLink} to="/crew">
+            <ul
+              className={`spacetour__navbar-option ${
+                active === "CREW" ? "underlined" : ""
+              }`}
+              onClick={() => setActive("CREW")}
+            >
+              <span className="ff-family-700">02</span>
+              <span className="margin-left-08">CREW</span>
+            </ul>
+          </Link>
+          <Link style={styleLink} to="/technology">
+            <ul
+              className={`spacetour__navbar-option ${
+                active === "TECHNOLOGY" ? "underlined" : ""
+              }`}
+              onClick={() => setActive("TECHNOLOGY")}
+            >
+              <span className="ff-family-700">03</span>
+              <span className="margin-left-08">TECHNOLOGY</span>
+            </ul>
+          </Link>
         </li>
       </nav>
     </>

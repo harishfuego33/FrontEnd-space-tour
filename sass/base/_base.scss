@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  overflow: hidden; /* fix boucing on the bottom */
+  overflow-x: hidden; /* fix boucing on the bottom */
   height: 100%;
   margin: 0;
   padding: 0;

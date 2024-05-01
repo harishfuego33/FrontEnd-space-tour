@@ -19,10 +19,9 @@ body {
   text-align: center;
   display: grid;
   place-items: center;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, 1fr);
   padding-inline: 1rem;
   padding-bottom: 4rem;
-  margin-top: 15.7rem;
   width: 100%;
   gap: 2rem;
   min-width: 320px;
@@ -30,14 +29,12 @@ body {
 .article {
   width: 41rem;
   min-width: 260px;
-  grid-column: 1;
 }
 .Explore {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-column: 2;
   height: 23.94rem;
   width: 23.94rem;
   border-radius: 50%;

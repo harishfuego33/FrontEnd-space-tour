@@ -7,24 +7,24 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3.7rem;
-  gap: 1rem;
+  // gap: 1rem;
   min-width: 320px;
-  position: fixed;
+  position: absolute;
   z-index: 1001;
   &-line {
-    // position: absolute;
     width: 30%;
     min-width: 4rem;
     height: 0.3px;
     background-color: rgba(128, 128, 128, 0.341);
     transform: translateX(4rem);
     z-index: 2;
-    flex-shrink: 2;
+    flex-shrink: 1;
   }
   &-options {
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 2.7px;
-    width: 70vw;
+    // font-family: "Barlow Condensed", sans-serif;
+    // letter-spacing: 2.7px;
+    font-size: var(--sentence);
+    width: 60vw;
     list-style: none;
     height: 8.7rem;
     display: flex;
@@ -32,24 +32,17 @@
     justify-content: space-evenly;
     backdrop-filter: blur(10px) brightness(150%);
     color: var(--primary-white);
-    gap: 4rem;
+    gap: 2rem;
     margin: 3.7rem 0;
-    padding-inline: 5rem;
+    padding-inline: 8rem;
+    // min-width: ;
   }
   &-option {
     display: block;
     min-width: max-content;
     padding: 3.5rem 0;
-    font-size: var(--sentence);
     cursor: pointer;
     border-bottom: 3px solid transparent;
-    & span:first-child {
-      font-weight: 700;
-    }
-    & span:last-child {
-      display: inline-block;
-      margin-left: 0.84rem;
-    }
   }
   &-log-box {
     width: 4.5rem;
