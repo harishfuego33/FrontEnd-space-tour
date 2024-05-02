@@ -35,6 +35,7 @@ html {
 body {
   box-sizing: border-box;
   position: relative;
+  min-width: 320px;
 }
 
 .spacetour__navbar {
@@ -188,7 +189,8 @@ body {
   width: 100%;
   min-width: 250px;
 }
-.article .hr {
+
+.hr {
   display: block;
   width: 100%;
   height: 0.3px;
@@ -294,10 +296,10 @@ body {
 
 .destination_section {
   display: grid;
-  grid-template-columns: 0.1 1fr 10% 1fr 0.1fr;
-  grid-template-rows: 0.6fr 1.8fr;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  grid-template-rows: min-content 1.8fr;
   grid-auto-flow: row;
-  grid-template-areas: ". item-1 item-1 item-1 ." ". . . item-3 ." ". item-2 . item-4 .";
+  grid-template-areas: ". item-1 item-1 item-1 " ". .  item-3 ." ". item-2  item-4 .";
   padding-inline: 1rem;
   padding-bottom: 4rem;
   column-gap: 4rem;
@@ -310,6 +312,7 @@ body {
   font-size: var(--heading-5);
   font-weight: 400;
   color: var(--primary-light-blue);
+  width: 100%;
 }
 
 .item-1 {
@@ -318,6 +321,7 @@ body {
 
 .item-2 {
   grid-area: item-2;
+  place-self: center;
 }
 
 .item-3 {
@@ -329,8 +333,7 @@ body {
 }
 
 .distination-picture {
-  width: 100%;
-  min-height: 60%;
+  width: 85%;
 }
 
 .destiation__navbar-options {
@@ -355,6 +358,7 @@ body {
   display: block;
   font-size: 1rem;
   color: var(--primary-light-blue);
+  margin-bottom: 1rem;
 }
 .destination__distance-1 p, .destination__distance-2 p {
   display: block;
@@ -362,7 +366,7 @@ body {
   color: var(--primary-white);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
   .home {
     background-image: url(/public/assets/home/background-home-tablet.jpg);
     background-position: center center;
@@ -424,12 +428,17 @@ body {
   .article__para-1 {
     text-align: center;
     margin: 0 auto;
+    font-size: var(--heading-5);
   }
   .destination_section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 2rem;
+  }
+  .distination-picture {
+    width: 60%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -454,11 +463,11 @@ body {
   }
   :root {
     --heading-1: 10rem;
-    --heading-2: 5.56rem;
+    --heading-2: 8rem;
     --heading-3: 3.1136rem;
     --heading-4: 1.7792rem;
     --heading-5: 1.6rem;
-    --senterce: 0.88896rem;
+    --senterce: 1.25rem;
   }
   .article {
     width: auto;
@@ -470,13 +479,32 @@ body {
   .article__heading-1 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: var(--heading-2);
   }
   .article__para-1 {
     text-align: center;
+    font-size: var(--senterce);
     width: 290px;
   }
   .hamburger__box {
     display: flex;
+  }
+  .destination_section {
+    margin-top: 12.4rem;
+  }
+  .destiation__navbar-options {
+    gap: 2rem;
+  }
+  .margin-bottom-2 {
+    margin: 0;
+  }
+  .hr {
+    margin: 2rem 0 2rem 0;
+  }
+  .destination__distance {
+    flex-direction: column;
+    height: 10rem;
+    gap: 3.5rem;
   }
 }
 

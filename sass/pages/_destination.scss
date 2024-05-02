@@ -11,13 +11,13 @@
 
 .destination_section {
   display: grid;
-  grid-template-columns: 0.1 1fr 10% 1fr 0.1fr;
-  grid-template-rows: 0.6fr 1.8fr;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  grid-template-rows: min-content 1.8fr;
   grid-auto-flow: row;
   grid-template-areas:
-    ". item-1 item-1 item-1 ."
-    ". . . item-3 ."
-    ". item-2 . item-4 .";
+    ". item-1 item-1 item-1 "
+    ". .  item-3 ."
+    ". item-2  item-4 .";
 
   padding-inline: 1rem;
   padding-bottom: 4rem;
@@ -30,12 +30,14 @@
   font-size: var(--heading-5);
   font-weight: 400;
   color: var(--primary-light-blue);
+  width: 100%;
 }
 .item-1 {
   grid-area: item-1;
 }
 .item-2 {
   grid-area: item-2;
+  place-self: center;
 }
 .item-3 {
   grid-area: item-3;
@@ -44,8 +46,7 @@
   grid-area: item-4;
 }
 .distination-picture {
-  width: 100%;
-  min-height: 60%;
+  width: 85%;
 }
 .destiation__navbar-options {
   display: flex;
@@ -59,8 +60,6 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  // gap: 2rem;
-  // height: 5rem;
   color: var(--primary-light-blue);
   &-1,
   &-2 {
@@ -71,6 +70,7 @@
     display: block;
     font-size: 1rem;
     color: var(--primary-light-blue);
+    margin-bottom: 1rem;
   }
   &-1 p,
   &-2 p {

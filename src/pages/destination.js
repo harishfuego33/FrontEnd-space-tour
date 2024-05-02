@@ -15,7 +15,7 @@ function Section() {
         DESTINATION
       </h1>
       {/*  */}
-      <picture id="moon-image" className=" item-2">
+      <picture id="moon-image" className="item-2">
         <source
           className="distination-picture"
           srcSet="assets/destination/image-moon.webp"
