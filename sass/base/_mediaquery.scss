@@ -44,7 +44,7 @@
   :root {
     --heading-1: 13rem;
     --heading-2: 5.56rem;
-    --heading-3: 3.1136rem;
+    --heading-3: 6rem;
     --heading-4: 1.7792rem;
     --heading-5: 1.2rem;
     --senterce: 0.88896rem;
@@ -57,6 +57,7 @@
     &__heading-1 {
       text-align: center;
       margin-bottom: 1.5rem;
+      font-size: var(--heading-3);
     }
     &__para-1 {
       text-align: center;
@@ -100,7 +101,7 @@
   :root {
     --heading-1: 10rem;
     --heading-2: 8rem;
-    --heading-3: 3.1136rem;
+    --heading-3: 6rem;
     --heading-4: 1.7792rem;
     --heading-5: 1.6rem;
     --senterce: 1.25rem;
@@ -114,7 +115,7 @@
     &__heading-1 {
       text-align: center;
       margin-bottom: 2rem;
-      font-size: var(--heading-2);
+      font-size: var(--heading-3);
     }
     &__para-1 {
       text-align: center;
@@ -137,6 +138,9 @@
   }
   .hr {
     margin: 2rem 0 2rem 0;
+  }
+  .distination-picture {
+    width: 50%;
   }
   .destination__distance {
     flex-direction: column;
