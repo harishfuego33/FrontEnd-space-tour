@@ -5,8 +5,8 @@
   --primary-dark: hsl(230, 35%, 7%);
   --primary-light-blue: hsl(231, 77%, 90%);
   --primary-white: #ffff;
-  --heading-1: 13rem;
-  --heading-2: 10rem;
+  --heading-1: 12rem;
+  --heading-2: 9rem;
   --heading-3: 5.6rem;
   --heading-4: 3.2rem;
   --heading-5: 2.8rem;
@@ -176,7 +176,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   font-style: normal;
-  font-size: var(--heading-1);
+  font-size: var(--heading-2);
   color: white;
   text-align: start;
   width: 100%;
@@ -257,6 +257,10 @@ body {
 
 .ff-size-10 {
   font-size: 10rem;
+}
+
+.ff-size-12 {
+  font-size: var(--heading-1);
 }
 
 .padding-top-bottom-1 {

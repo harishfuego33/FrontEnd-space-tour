@@ -1,7 +1,6 @@
 .article {
   min-width: 250px;
   &__heading-5 {
-    // article__heading-5
     letter-spacing: 4.75px;
     font-size: var(--heading-5);
     font-weight: 400;
@@ -13,7 +12,7 @@
     text-transform: uppercase;
     font-weight: 400;
     font-style: normal;
-    font-size: var(--heading-1);
+    font-size: var(--heading-2);
     color: white;
     text-align: start;
     width: 100%;

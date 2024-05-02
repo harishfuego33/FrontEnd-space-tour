@@ -15,13 +15,13 @@ function Section() {
 
   return (
     <main className="destination_section margin-top-19">
-      <Navbar active={active} setActive={setActive} />
       {destinations.map((item) => {
         const { png, webp } = item.images;
         if (active === item.name) {
           return (
             <>
               <Picture key={item.distance} png={png} webp={webp} />
+              <Navbar active={active} setActive={setActive} />
               <Article
                 key={item.name}
                 name={item.name}
@@ -40,9 +40,7 @@ function Section() {
 function Article({ name, description, distance, travel }) {
   return (
     <article className="article item-4">
-      <h1 className="article__heading-1 ff-bellfair ff-size-10 margin-bottom-2">
-        {name}
-      </h1>
+      <h1 className="article__heading-1 ff-bellfair margin-bottom-2">{name}</h1>
       <p className="article__para-1 ff-barlow-sans ">{description}</p>
       <span className="hr"></span>
       <div className="destination__distance ">
