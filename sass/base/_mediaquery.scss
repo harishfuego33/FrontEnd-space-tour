@@ -4,6 +4,16 @@
     background-position: center center;
     width: 100vw;
   }
+  .destiation {
+    background-image: url(/public/assets/destination/background-destination-tablet.jpg);
+    background-position: center center;
+    width: 100vw;
+  }
+  .crew {
+    background-image: url(/public/assets/crew/background-crew-tablet.jpg);
+    background-position: center center;
+    width: 100vw;
+  }
   .spacetour__navbar {
     height: 8.7rem;
     gap: 0;
@@ -48,6 +58,7 @@
     --heading-4: 1.7792rem;
     --heading-5: 1.2rem;
     --senterce: 0.88896rem;
+    --numbered-title: 1.3rem;
   }
   .article {
     &__heading-5 {
@@ -75,10 +86,79 @@
   .distination-picture {
     width: 60%;
   }
+  // crew
+
+  .crew_main {
+    grid-template-columns: initial;
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-areas:
+      "crew-1"
+      "crew-2"
+      "crew-3"
+      "crew-4 ";
+    align-items: center;
+    &-info {
+      text-align: center;
+      width: 100%;
+    }
+    &-title {
+      font-size: var(--heading-4);
+    }
+    &-name {
+      color: var(--primary-white);
+      font-size: var(--crew, 3rem);
+      font-weight: 400;
+    }
+  }
+  .crew-2 {
+    grid-area: crew-2;
+  }
+  .crew-3 {
+    grid-area: crew-3;
+    align-self: center;
+  }
+  .crew-4 {
+    grid-area: crew-4;
+    align-self: center;
+  }
+  .crew__picture-box {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+  }
+  .crew-picture {
+    width: 50%;
+    height: 100%;
+  }
+  .crew__navbar {
+    margin-top: 0;
+    // margin: auto 0;
+    height: 1rem;
+    &-options {
+      height: 1rem;
+      justify-content: center;
+    }
+    &-option {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
 }
 @media only screen and (max-width: 500px) {
   .home {
     background-image: url(/public/assets/home/background-home-mobile.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    width: 100vw;
+  }
+  .destiation {
+    background-image: url(/public/assets/destination/background-destination-mobile.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    width: 100vw;
+  }
+  .crew {
+    background-image: url(/public/assets/crew/background-crew-mobile.jpg);
     background-position: bottom center;
     background-size: cover;
     width: 100vw;
@@ -146,5 +226,17 @@
     flex-direction: column;
     height: 10rem;
     gap: 3.5rem;
+  }
+  .crew_main {
+    grid-template-areas:
+      "crew-1"
+      "crew-4 "
+      "crew-3"
+      "crew-2";
+    text-align: center;
+    margin-top: 12.4rem;
+  }
+  .hr {
+    margin: 0;
   }
 }

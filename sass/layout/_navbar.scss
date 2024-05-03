@@ -21,8 +21,6 @@
     flex-shrink: 1;
   }
   &-options {
-    // font-family: "Barlow Condensed", sans-serif;
-    // letter-spacing: 2.7px;
     font-size: var(--sentence);
     width: 60vw;
     list-style: none;
@@ -35,7 +33,6 @@
     gap: 2rem;
     margin: 3.7rem 0;
     padding-inline: 8rem;
-    // min-width: ;
   }
   &-option {
     display: block;
@@ -45,9 +42,12 @@
     border-bottom: 3px solid transparent;
   }
   &-log-box {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 4rem;
     margin: 2rem 4rem;
+  }
+  &-logo {
+    width: 4rem;
   }
   &-hamburger-box {
     cursor: pointer;

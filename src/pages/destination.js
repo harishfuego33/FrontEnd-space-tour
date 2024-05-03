@@ -61,7 +61,7 @@ function Picture({ png, webp }) {
   return (
     <>
       <h1 className="numbered-title item-1 ff-barlow-con-sans">
-        <span className="ff-weigth-700 light-gray">01</span> PICK YOUR
+        <span className="ff-weigth-700 light-gray">01</span>PICK YOUR
         DESTINATION
       </h1>
       <picture id="moon-image" className="item-2">
@@ -77,7 +77,7 @@ function Picture({ png, webp }) {
 }
 function Navbar({ active, setActive }) {
   return (
-    <section className=" destiation__navbar-options item-3 ff-barlow-con-sans">
+    <section className="destiation__navbar-options item-3 ff-barlow-con-sans">
       <li className="destiation__navbar-options ">
         <ul
           className={`spacetour__navbar-option padding-top-bottom-1 ${

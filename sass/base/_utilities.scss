@@ -14,6 +14,7 @@
 .underlined__right {
   border-right: 3px solid white;
 }
+
 .ff-weigth-700 {
   font-weight: 700;
 }
@@ -44,4 +45,10 @@
 }
 .light-gray {
   color: hsl(222, 6%, 34%);
+}
+.light-blue {
+  color: var(--primary-light-blue);
+}
+.var-width {
+  width: 70%;
 }

@@ -10,6 +10,8 @@
   --heading-3: 5.6rem;
   --heading-4: 3.2rem;
   --heading-5: 2.8rem;
+  --numbered-title: 2.5rem;
+  --heading-crew-name: 5rem;
   --subheading-1: 2.8rem;
   --subheading-2: 1.4rem;
   --sentence: 1.6rem;
@@ -81,9 +83,12 @@ body {
   border-bottom: 3px solid transparent;
 }
 .spacetour__navbar-log-box {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
   margin: 2rem 4rem;
+}
+.spacetour__navbar-logo {
+  width: 4rem;
 }
 .spacetour__navbar-hamburger-box {
   cursor: pointer;
@@ -103,6 +108,7 @@ body {
   background-image: url(/public/assets/home/background-home-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden; /* fix boucing on the bottom */
@@ -182,10 +188,10 @@ body {
   width: 100%;
 }
 .article__para-1 {
-  font-size: var(--sentence);
+  font-size: var(--new, 1.45rem);
   font-weight: 100;
   color: var(--primary-light-blue);
-  line-height: 1.5;
+  line-height: 1.7;
   text-align: start;
   width: 100%;
   min-width: 250px;
@@ -288,10 +294,19 @@ body {
   color: hsl(222, 6%, 34%);
 }
 
+.light-blue {
+  color: var(--primary-light-blue);
+}
+
+.var-width {
+  width: 70%;
+}
+
 .destination {
   background-image: url(/public/assets/destination/background-destination-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden; /* fix boucing on the bottom */
@@ -301,8 +316,8 @@ body {
 
 .destination_section {
   display: grid;
-  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-  grid-template-rows: min-content 1.8fr;
+  grid-template-columns: 0.2fr 1fr 1fr 0fr;
+  grid-template-rows: min-content 0.7fr 1.8fr;
   grid-auto-flow: row;
   grid-template-areas: ". item-1 item-1 item-1 " ". .  item-3 ." ". item-2  item-4 .";
   padding-inline: 1rem;
@@ -310,14 +325,18 @@ body {
   column-gap: 4rem;
   width: 100%;
   min-width: 320px;
+  overflow: hidden;
 }
 
 .numbered-title {
   letter-spacing: 4.75px;
-  font-size: var(--heading-5);
+  font-size: var(--numbered-title);
   font-weight: 400;
   color: var(--primary-light-blue);
   width: 100%;
+}
+.numbered-title span {
+  margin-inline-end: 1rem;
 }
 
 .item-1 {
@@ -373,9 +392,109 @@ body {
   color: var(--primary-white);
 }
 
+.crew {
+  background-image: url(/public/assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden; /* fix boucing on the bottom */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.crew_main {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-template-rows: 0.4fr 0.4fr 0.45fr;
+  grid-auto-flow: row;
+  grid-template-areas: ". crew-1 crew-4 ." ". crew-2 crew-4 ." ". crew-3 crew-4 ." ". .      crew-4 .";
+  padding-inline: 1rem;
+  column-gap: 2rem;
+  width: 100%;
+  min-width: 320px;
+  margin-top: 19.4rem;
+  overflow: hidden;
+}
+.crew_main-info {
+  width: 60rem;
+  min-width: 26rem;
+}
+.crew_main-title {
+  text-transform: uppercase;
+  color: gray;
+  font-size: var(--heading-5);
+  font-weight: 200;
+}
+.crew_main-name {
+  color: var(--primary-white);
+  font-size: var(--heading-crew-name);
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+.crew-1 {
+  grid-area: crew-1;
+}
+
+.crew-2 {
+  grid-area: crew-2;
+}
+
+.crew-3 {
+  grid-area: crew-3;
+}
+
+.crew-4 {
+  grid-area: crew-4;
+  place-self: center;
+}
+
+.crew__picture-box {
+  width: 120%;
+  height: 100%;
+}
+
+.crew-picture {
+  width: 90%;
+  height: 100%;
+}
+
+.crew__navbar {
+  margin-top: 4rem;
+}
+.crew__navbar-options {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  gap: 2rem;
+}
+.crew__navbar-option {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: hsl(229, 9%, 23%);
+  cursor: pointer;
+}
+
+.background-white {
+  background-color: var(--primary-white);
+}
+
 @media only screen and (max-width: 820px) {
   .home {
     background-image: url(/public/assets/home/background-home-tablet.jpg);
+    background-position: center center;
+    width: 100vw;
+  }
+  .destiation {
+    background-image: url(/public/assets/destination/background-destination-tablet.jpg);
+    background-position: center center;
+    width: 100vw;
+  }
+  .crew {
+    background-image: url(/public/assets/crew/background-crew-tablet.jpg);
     background-position: center center;
     width: 100vw;
   }
@@ -423,6 +542,7 @@ body {
     --heading-4: 1.7792rem;
     --heading-5: 1.2rem;
     --senterce: 0.88896rem;
+    --numbered-title: 1.3rem;
   }
   .article__heading-5 {
     text-align: center;
@@ -448,10 +568,72 @@ body {
   .distination-picture {
     width: 60%;
   }
+  .crew_main {
+    grid-template-columns: initial;
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-areas: "crew-1" "crew-2" "crew-3" "crew-4 ";
+    align-items: center;
+  }
+  .crew_main-info {
+    text-align: center;
+    width: 100%;
+  }
+  .crew_main-title {
+    font-size: var(--heading-4);
+  }
+  .crew_main-name {
+    color: var(--primary-white);
+    font-size: var(--crew, 3rem);
+    font-weight: 400;
+  }
+  .crew-2 {
+    grid-area: crew-2;
+  }
+  .crew-3 {
+    grid-area: crew-3;
+    align-self: center;
+  }
+  .crew-4 {
+    grid-area: crew-4;
+    align-self: center;
+  }
+  .crew__picture-box {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+  }
+  .crew-picture {
+    width: 50%;
+    height: 100%;
+  }
+  .crew__navbar {
+    margin-top: 0;
+    height: 1rem;
+  }
+  .crew__navbar-options {
+    height: 1rem;
+    justify-content: center;
+  }
+  .crew__navbar-option {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
 }
 @media only screen and (max-width: 500px) {
   .home {
     background-image: url(/public/assets/home/background-home-mobile.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    width: 100vw;
+  }
+  .destiation {
+    background-image: url(/public/assets/destination/background-destination-mobile.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    width: 100vw;
+  }
+  .crew {
+    background-image: url(/public/assets/crew/background-crew-mobile.jpg);
     background-position: bottom center;
     background-size: cover;
     width: 100vw;
@@ -516,6 +698,14 @@ body {
     flex-direction: column;
     height: 10rem;
     gap: 3.5rem;
+  }
+  .crew_main {
+    grid-template-areas: "crew-1" "crew-4 " "crew-3" "crew-2";
+    text-align: center;
+    margin-top: 12.4rem;
+  }
+  .hr {
+    margin: 0;
   }
 }
 

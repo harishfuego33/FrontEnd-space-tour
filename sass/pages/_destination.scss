@@ -2,6 +2,7 @@
   background-image: url(/public/assets/destination/background-destination-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden; /* fix boucing on the bottom */
@@ -11,8 +12,8 @@
 
 .destination_section {
   display: grid;
-  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-  grid-template-rows: min-content 1.8fr;
+  grid-template-columns: 0.2fr 1fr 1fr 0fr;
+  grid-template-rows: min-content 0.7fr 1.8fr;
   grid-auto-flow: row;
   grid-template-areas:
     ". item-1 item-1 item-1 "
@@ -24,13 +25,17 @@
   column-gap: 4rem;
   width: 100%;
   min-width: 320px;
+  overflow: hidden;
 }
 .numbered-title {
   letter-spacing: 4.75px;
-  font-size: var(--heading-5);
+  font-size: var(--numbered-title);
   font-weight: 400;
   color: var(--primary-light-blue);
   width: 100%;
+  & span {
+    margin-inline-end: 1rem;
+  }
 }
 .item-1 {
   grid-area: item-1;

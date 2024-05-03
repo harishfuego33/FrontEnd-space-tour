@@ -1,0 +1,84 @@
+.crew {
+  background-image: url(/public/assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden; /* fix boucing on the bottom */
+  display: flex;
+  justify-content: flex-end;
+}
+.crew_main {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-template-rows: 0.4fr 0.4fr 0.45fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". crew-1 crew-4 ."
+    ". crew-2 crew-4 ."
+    ". crew-3 crew-4 ."
+    ". .      crew-4 .";
+  padding-inline: 1rem;
+  column-gap: 2rem;
+  width: 100%;
+  min-width: 320px;
+  margin-top: 19.4rem;
+  overflow: hidden;
+  &-info {
+    width: 60rem;
+    min-width: 26rem;
+  }
+  &-title {
+    text-transform: uppercase;
+    color: gray;
+    font-size: var(--heading-5);
+    font-weight: 200;
+  }
+  &-name {
+    color: var(--primary-white);
+    font-size: var(--heading-crew-name);
+    font-weight: 400;
+    margin: 2rem 0;
+  }
+}
+.crew-1 {
+  grid-area: crew-1;
+}
+.crew-2 {
+  grid-area: crew-2;
+}
+.crew-3 {
+  grid-area: crew-3;
+}
+.crew-4 {
+  grid-area: crew-4;
+  place-self: center;
+}
+.crew__picture-box {
+  width: 120%;
+  height: 100%;
+}
+.crew-picture {
+  width: 90%;
+  height: 100%;
+}
+.crew__navbar {
+  margin-top: 4rem;
+  &-options {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    gap: 2rem;
+  }
+  &-option {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: hsl(229, 9%, 23%);
+    cursor: pointer;
+  }
+}
+.background-white {
+  background-color: var(--primary-white);
+}
