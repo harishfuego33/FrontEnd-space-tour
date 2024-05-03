@@ -585,7 +585,7 @@ body {
   }
   .crew_main-name {
     color: var(--primary-white);
-    font-size: var(--crew, 3.5rem);
+    font-size: var(--crew, 3rem);
     font-weight: 400;
   }
   .crew-2 {
@@ -694,7 +694,7 @@ body {
     margin: 2rem 0 2rem 0;
   }
   .distination-picture {
-    width: 50%;
+    width: 55%;
   }
   .destination__distance {
     flex-direction: column;
