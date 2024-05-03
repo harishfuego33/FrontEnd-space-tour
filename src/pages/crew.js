@@ -46,7 +46,7 @@ function Picture({ img, webp }) {
         type="image/webp"
       />
       <img className="crew-picture crew-4" src={img} alt="the moon" />
-      <span className="hr "></span>
+      <span className="crew-hr "></span>
     </picture>
   );
 }

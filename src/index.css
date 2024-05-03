@@ -570,9 +570,10 @@ body {
   }
   .crew_main {
     grid-template-columns: initial;
-    grid-template-rows: repeat(1fr, 3);
+    grid-template-rows: initial;
     grid-template-areas: "crew-1" "crew-2" "crew-3" "crew-4 ";
     align-items: center;
+    margin-top: 12.4rem;
   }
   .crew_main-info {
     text-align: center;
@@ -606,12 +607,10 @@ body {
     width: 50%;
     height: 100%;
   }
-  .crew__navbar {
-    margin-top: 0;
-    height: 1rem;
-  }
   .crew__navbar-options {
-    height: 1rem;
+    margin: 2rem 0;
+    height: 3rem;
+    align-items: center;
     justify-content: center;
   }
   .crew__navbar-option {
@@ -704,8 +703,11 @@ body {
     text-align: center;
     margin-top: 12.4rem;
   }
-  .hr {
-    margin: 0;
+  .crew-hr {
+    display: block;
+    width: 100%;
+    height: 0.3px;
+    background-color: rgba(128, 128, 128, 0.341);
   }
 }
 
