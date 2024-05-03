@@ -108,7 +108,7 @@
     }
     &-name {
       color: var(--primary-white);
-      font-size: var(--crew, 3rem);
+      font-size: var(--crew, 3.5rem);
       font-weight: 400;
     }
   }
@@ -186,7 +186,7 @@
     --heading-3: 6rem;
     --heading-4: 1.7792rem;
     --heading-5: 1.6rem;
-    --senterce: 1.25rem;
+    --senterce: 1.5rem;
   }
   .article {
     width: auto;
@@ -230,7 +230,7 @@
     gap: 3.5rem;
   }
   .crew_main {
-    grid-template-rows: min-content 0.1fr max-content 0.5fr;
+    grid-template-rows: min-content 0.1fr min-content 0.5fr;
     grid-template-areas:
       "crew-1"
       "crew-4 "
