@@ -702,7 +702,7 @@ body {
     gap: 3.5rem;
   }
   .crew_main {
-    grid-template-rows: min-content 0.1fr max-content 0.6fr;
+    grid-template-rows: min-content 0.1fr max-content 0.5fr;
     grid-template-areas: "crew-1" "crew-4 " "crew-3" "crew-2";
     text-align: center;
     margin-top: 12.4rem;
