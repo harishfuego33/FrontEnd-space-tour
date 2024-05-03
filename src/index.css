@@ -574,6 +574,7 @@ body {
     grid-template-areas: "crew-1" "crew-2" "crew-3" "crew-4 ";
     align-items: center;
     margin-top: 12.4rem;
+    gap: 1rem;
   }
   .crew_main-info {
     text-align: center;
@@ -607,8 +608,10 @@ body {
     width: 50%;
     height: 100%;
   }
+  .crew__navbar {
+    margin: 0;
+  }
   .crew__navbar-options {
-    margin: 2rem 0;
     height: 3rem;
     align-items: center;
     justify-content: center;

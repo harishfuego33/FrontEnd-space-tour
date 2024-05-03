@@ -98,6 +98,7 @@
       "crew-4 ";
     align-items: center;
     margin-top: 12.4rem;
+    gap: 1rem;
     &-info {
       text-align: center;
       width: 100%;
@@ -132,8 +133,9 @@
     height: 100%;
   }
   .crew__navbar {
+    margin: 0;
     &-options {
-      margin: 2rem 0;
+      // margin: 2rem 0;
       height: 3rem;
       align-items: center;
       justify-content: center;
