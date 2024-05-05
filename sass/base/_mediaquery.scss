@@ -14,6 +14,11 @@
     background-position: center center;
     width: 100vw;
   }
+  .technology {
+    background-image: url(/public/assets/technology/background-technology-tablet.jpg);
+    background-position: center center;
+    width: 100vw;
+  }
   .spacetour__navbar {
     height: 8.7rem;
     gap: 0;
@@ -208,6 +213,12 @@
   }
   .crew {
     background-image: url(/public/assets/crew/background-crew-mobile.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    width: 100vw;
+  }
+  .technology {
+    background-image: url(/public/assets/technology/background-technology-mobile.jpg);
     background-position: bottom center;
     background-size: cover;
     width: 100vw;
