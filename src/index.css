@@ -557,6 +557,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .technology__navbar-option span {
   color: white;
@@ -748,7 +749,6 @@ body {
   }
   .technology__navbar-options {
     flex-direction: row;
-    cursor: pointer;
     height: 5rem;
     width: 20rem;
   }
