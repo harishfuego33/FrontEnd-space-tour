@@ -42,7 +42,7 @@ function Main() {
     </main>
   );
 }
-function Picture({ portrait, landschape }) {
+function Picture({ portrait, landscape }) {
   return (
     <picture
       id="launch-vehicle-portrait"
@@ -54,7 +54,7 @@ function Picture({ portrait, landschape }) {
         className="technology-pricture-1"
       />
       <img
-        src={landschape}
+        src={landscape}
         alt="launch-vehicle-portrait"
         className="technology-pricture-2"
       />

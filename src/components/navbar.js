@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState("HOME");
@@ -15,61 +16,64 @@ export default function Navbar() {
         className={"hamburger__box ff-barlow-con-sans"}
         style={hamburger === false ? { transform: "translateX(0)" } : {}}
       >
-        <li className="hamburger__box-options">
-          <Link style={styleLink} to="/">
-            <ul
-              className={`hamburger__box-option ${
-                active === "HOME" ? "underlined__right" : ""
-              }`}
-              onClick={() => setActive("HOME")}
-            >
-              <span className="ff-weigth-700">00</span>
-              <span>HOME</span>
-            </ul>
-          </Link>
-          <Link style={styleLink} to="/destination">
-            <ul
-              className={`hamburger__box-option ${
-                active === "DESTINATION" ? "underlined__right" : ""
-              }`}
-              onClick={() => setActive("DESTINATION")}
-            >
-              <span className="ff-weigth-700">01</span>
-              <span>DESTINATION</span>
-            </ul>
-          </Link>
-          <Link style={styleLink} to="/crew">
-            <ul
-              className={`hamburger__box-option ${
-                active === "CREW" ? "underlined__right" : ""
-              }`}
-              onClick={() => setActive("CREW")}
-            >
-              <span className="ff-weigth-700">02</span>
-              <span>CREW</span>
-            </ul>
-          </Link>
-          <Link style={styleLink} to="/technology">
-            <ul
-              className={`hamburger__box-option ${
-                active === "TECHNOLOGY" ? "underlined__right" : ""
-              }`}
-              onClick={() => setActive("TECHNOLOGY")}
-            >
-              <span className="ff-weigth-700">03</span>
-              <span>TECHNOLOGY</span>
-            </ul>
-          </Link>
-        </li>
+        <ul className="hamburger__box-options">
+          <NavLink
+            style={styleLink}
+            to="/"
+            onClick={() => setActive("HOME")}
+            className={`hamburger__box-option ${
+              active === "HOME" ? "underlined__right" : ""
+            }`}
+          >
+            <span className="ff-weigth-700">00</span>
+            <span>HOME</span>
+          </NavLink>
+          <NavLink
+            style={styleLink}
+            to="/destination"
+            onClick={() => setActive("DESTINATION")}
+            className={`hamburger__box-option ${
+              active === "DESTINATION" ? "underlined__right" : ""
+            }`}
+          >
+            <span className="ff-weigth-700">01</span>
+            <span>DESTINATION</span>
+          </NavLink>
+          <NavLink
+            style={styleLink}
+            to="/crew"
+            onClick={() => setActive("CREW")}
+            className={`hamburger__box-option ${
+              active === "CREW" ? "underlined__right" : ""
+            }`}
+          >
+            <span className="ff-weigth-700">02</span>
+            <span>CREW</span>
+          </NavLink>
+          <NavLink
+            style={styleLink}
+            to="/technology"
+            onClick={() => setActive("TECHNOLOGY")}
+            className={`hamburger__box-option ${
+              active === "TECHNOLOGY" ? "underlined__right" : ""
+            }`}
+          >
+            <span className="ff-weigth-700">03</span>
+            <span>TECHNOLOGY</span>
+          </NavLink>
+        </ul>
       </div>
+      {/*  */}
       <nav className="spacetour__navbar">
-        <div className="spacetour__navbar-log-box">
-          <img
-            src="./assets/shared/logo.svg"
-            alt="logo"
-            className="spacetour__navbar-logo"
-          />
-        </div>
+        <Link style={styleLink} to="/">
+          <div className="spacetour__navbar-log-box">
+            <img
+              src="./assets/shared/logo.svg"
+              alt="logo"
+              className="spacetour__navbar-logo"
+            />
+          </div>
+        </Link>
         {/*  */}
         <span className="spacetour__navbar-line"></span>
         {/*  */}
@@ -83,52 +87,61 @@ export default function Navbar() {
             onClick={() => setHamburger(!hamburger)}
           />
         </div>
-        <li className="spacetour__navbar-options ff-barlow-con-sans">
-          <Link style={styleLink} to="/">
-            <ul
-              className={`spacetour__navbar-option ${
-                active === "HOME" ? "underlined" : ""
-              }`}
-              onClick={() => setActive("HOME")}
-            >
-              <span className="ff-family-700">00</span>
-              <span className="margin-left-08">HOME</span>
-            </ul>
-          </Link>
-          <Link style={styleLink} to="/destination">
-            <ul
-              className={`spacetour__navbar-option ${
-                active === "DESTINATION" ? "underlined" : ""
-              }`}
-              onClick={() => setActive("DESTINATION")}
-            >
-              <span className="ff-family-700">01</span>
-              <span className="margin-left-08">DESTINATION</span>
-            </ul>
-          </Link>
-          <Link style={styleLink} to="/crew">
-            <ul
-              className={`spacetour__navbar-option ${
-                active === "CREW" ? "underlined" : ""
-              }`}
-              onClick={() => setActive("CREW")}
-            >
-              <span className="ff-family-700">02</span>
-              <span className="margin-left-08">CREW</span>
-            </ul>
-          </Link>
-          <Link style={styleLink} to="/technology">
-            <ul
-              className={`spacetour__navbar-option ${
-                active === "TECHNOLOGY" ? "underlined" : ""
-              }`}
-              onClick={() => setActive("TECHNOLOGY")}
-            >
-              <span className="ff-family-700">03</span>
-              <span className="margin-left-08">TECHNOLOGY</span>
-            </ul>
-          </Link>
-        </li>
+
+        <ul className="spacetour__navbar-options ff-barlow-con-sans">
+          <NavLink
+            style={styleLink}
+            to="/"
+            onClick={() => setActive("HOME")}
+            activeClassName="underlined"
+            key="home"
+            className={`spacetour__navbar-option ${
+              active === "HOME" ? "underlined" : ""
+            }`}
+          >
+            <span className="ff-family-700">00</span>
+            <span className="margin-left-08">HOME</span>
+          </NavLink>
+          <NavLink
+            style={styleLink}
+            to="/destination"
+            onClick={() => setActive("DESTINATION")}
+            activeClassName="underlined"
+            key="destination"
+            className={`spacetour__navbar-option ${
+              active === "DESTINATION" ? "underlined" : ""
+            }`}
+          >
+            <span className="ff-family-700">01</span>
+            <span className="margin-left-08">DESTINATION</span>
+          </NavLink>
+          <NavLink
+            style={styleLink}
+            to="/crew"
+            onClick={() => setActive("CREW")}
+            activeClassName="underlined"
+            key="crew"
+            className={`spacetour__navbar-option ${
+              active === "CREW" ? "underlined" : ""
+            }`}
+          >
+            <span className="ff-family-700">02</span>
+            <span className="margin-left-08">CREW</span>
+          </NavLink>
+          <NavLink
+            style={styleLink}
+            to="/technology"
+            onClick={() => setActive("TECHNOLOGY")}
+            activeClassName="underlined"
+            key="technology"
+            className={`spacetour__navbar-option ${
+              active === "TECHNOLOGY" ? "underlined" : ""
+            }`}
+          >
+            <span className="ff-family-700">03</span>
+            <span className="margin-left-08">TECHNOLOGY</span>
+          </NavLink>
+        </ul>
       </nav>
     </>
   );
