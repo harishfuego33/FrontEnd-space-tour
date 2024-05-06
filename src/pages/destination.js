@@ -11,7 +11,6 @@ function Destination() {
 function Section() {
   const [active, setActive] = useState("Moon");
   const { destinations } = data;
-  // console.log(destinations);
 
   return (
     <main className="destination_section margin-top-19">
@@ -57,7 +56,6 @@ function Article({ name, description, distance, travel }) {
   );
 }
 function Picture({ png, webp }) {
-  console.log(png, webp);
   return (
     <>
       <h1 className="numbered-title item-1 ff-barlow-con-sans">

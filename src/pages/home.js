@@ -1,4 +1,4 @@
-// import background from
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="home">
@@ -7,6 +7,11 @@ function Home() {
   );
 }
 function Section() {
+  const styleLink = {
+    color: "black",
+    textDecoration: "none",
+    diplay: "block",
+  };
   return (
     <main className="home_section margin-top-19">
       <article className="article">
@@ -21,9 +26,11 @@ function Section() {
           experience!
         </p>
       </article>
-      <div className="Explore">
-        <h3 className="Explore__title">Explore</h3>
-      </div>
+      <Link to="/destination" style={styleLink}>
+        <div className="Explore">
+          <h3 className="Explore__title">Explore</h3>
+        </div>
+      </Link>
     </main>
   );
 }

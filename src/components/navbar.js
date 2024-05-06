@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useResolvedPath, useMatch } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const [active, setActive] = useState("HOME");
+  // const [active, setActive] = useState("HOME");
   const [hamburger, setHamburger] = useState(true);
   const styleLink = {
     color: "white",
     textDecoration: "none",
     diplay: "block",
   };
+
   return (
     <>
       <div
@@ -17,62 +18,38 @@ export default function Navbar() {
         style={hamburger === false ? { transform: "translateX(0)" } : {}}
       >
         <ul className="hamburger__box-options">
-          <NavLink
-            style={styleLink}
+          <HamburgerNavbtn
+            key="4021"
+            title="HOME"
             to="/"
-            onClick={() => {
-              setActive("HOME");
-              setHamburger(!hamburger);
-            }}
-            className={`hamburger__box-option ${
-              active === "HOME" ? "underlined__right" : ""
-            }`}
-          >
-            <span className="ff-weigth-700">00</span>
-            <span>HOME</span>
-          </NavLink>
-          <NavLink
-            style={styleLink}
+            index="00"
+            hamburger={hamburger}
+            setHamburger={setHamburger}
+          />
+          <HamburgerNavbtn
+            key="4022"
+            title="DESTINATION"
             to="/destination"
-            onClick={() => {
-              setActive("DESTINATION");
-              setHamburger(!hamburger);
-            }}
-            className={`hamburger__box-option ${
-              active === "DESTINATION" ? "underlined__right" : ""
-            }`}
-          >
-            <span className="ff-weigth-700">01</span>
-            <span>DESTINATION</span>
-          </NavLink>
-          <NavLink
-            style={styleLink}
+            index="01"
+            hamburger={hamburger}
+            setHamburger={setHamburger}
+          />
+          <HamburgerNavbtn
+            key="4023"
+            title="CREW"
             to="/crew"
-            onClick={() => {
-              setActive("CREW");
-              setHamburger(!hamburger);
-            }}
-            className={`hamburger__box-option ${
-              active === "CREW" ? "underlined__right" : ""
-            }`}
-          >
-            <span className="ff-weigth-700">02</span>
-            <span>CREW</span>
-          </NavLink>
-          <NavLink
-            style={styleLink}
+            index="02"
+            hamburger={hamburger}
+            setHamburger={setHamburger}
+          />
+          <HamburgerNavbtn
+            key="4024"
+            title="TECHNOLOGY"
             to="/technology"
-            onClick={() => {
-              setActive("TECHNOLOGY");
-              setHamburger(!hamburger);
-            }}
-            className={`hamburger__box-option ${
-              active === "TECHNOLOGY" ? "underlined__right" : ""
-            }`}
-          >
-            <span className="ff-weigth-700">03</span>
-            <span>TECHNOLOGY</span>
-          </NavLink>
+            index="03"
+            hamburger={hamburger}
+            setHamburger={setHamburger}
+          />
         </ul>
       </div>
       {/*  */}
@@ -101,60 +78,66 @@ export default function Navbar() {
         </div>
 
         <ul className="spacetour__navbar-options ff-barlow-con-sans">
-          <NavLink
-            style={styleLink}
-            to="/"
-            onClick={() => setActive("HOME")}
-            activeClassName="underlined"
-            key="home"
-            className={`spacetour__navbar-option ${
-              active === "HOME" ? "underlined" : ""
-            }`}
-          >
-            <span className="ff-family-700">00</span>
-            <span className="margin-left-08">HOME</span>
-          </NavLink>
-          <NavLink
-            style={styleLink}
+          <NavBtn title="HOME" to="/" index="00" key="00"></NavBtn>
+          <NavBtn
+            key="01"
+            title="DESTINATION"
             to="/destination"
-            onClick={() => setActive("DESTINATION")}
-            activeClassName="underlined"
-            key="destination"
-            className={`spacetour__navbar-option ${
-              active === "DESTINATION" ? "underlined" : ""
-            }`}
-          >
-            <span className="ff-family-700">01</span>
-            <span className="margin-left-08">DESTINATION</span>
-          </NavLink>
-          <NavLink
-            style={styleLink}
-            to="/crew"
-            onClick={() => setActive("CREW")}
-            activeClassName="underlined"
-            key="crew"
-            className={`spacetour__navbar-option ${
-              active === "CREW" ? "underlined" : ""
-            }`}
-          >
-            <span className="ff-family-700">02</span>
-            <span className="margin-left-08">CREW</span>
-          </NavLink>
-          <NavLink
-            style={styleLink}
+            index="01"
+          ></NavBtn>
+          <NavBtn key="02" title="CREW" to="/crew" index="02"></NavBtn>
+          <NavBtn
+            key="03"
+            title="TECHNOLOGY"
             to="/technology"
-            onClick={() => setActive("TECHNOLOGY")}
-            activeClassName="underlined"
-            key="technology"
-            className={`spacetour__navbar-option ${
-              active === "TECHNOLOGY" ? "underlined" : ""
-            }`}
-          >
-            <span className="ff-family-700">03</span>
-            <span className="margin-left-08">TECHNOLOGY</span>
-          </NavLink>
+            index="03"
+          ></NavBtn>
         </ul>
       </nav>
     </>
+  );
+}
+function HamburgerNavbtn({ title, to, index, setHamburger, hamburger }) {
+  const resolvedPath = useResolvedPath(to);
+  const active = useMatch({ path: resolvedPath.pathname, end: true });
+  const styleLink = {
+    color: "white",
+    textDecoration: "none",
+    diplay: "block",
+  };
+  return (
+    <NavLink
+      style={styleLink}
+      to={to}
+      onClick={() => {
+        setHamburger(!hamburger);
+      }}
+      className={`hamburger__box-option ${
+        active === title ? "underlined__right" : ""
+      }`}
+    >
+      <span className="ff-weigth-700">{index}</span>
+      <span>{title}</span>
+    </NavLink>
+  );
+}
+
+function NavBtn({ title, to, index }) {
+  const resolvedPath = useResolvedPath(to);
+  const active = useMatch({ path: resolvedPath.pathname, end: true });
+  const styleLink = {
+    color: "white",
+    textDecoration: "none",
+    diplay: "block",
+  };
+  return (
+    <NavLink
+      style={styleLink}
+      to={to}
+      className={`spacetour__navbar-option ${active ? "underlined" : ""}`}
+    >
+      <span className="ff-family-700">{index}</span>
+      <span className="margin-left-08">{title}</span>
+    </NavLink>
   );
 }
