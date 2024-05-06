@@ -112,9 +112,7 @@ function HamburgerNavbtn({ title, to, index, setHamburger, hamburger }) {
       onClick={() => {
         setHamburger(!hamburger);
       }}
-      className={`hamburger__box-option ${
-        active === title ? "underlined__right" : ""
-      }`}
+      className={`hamburger__box-option ${active ? "underlined__right" : ""}`}
     >
       <span className="ff-weigth-700">{index}</span>
       <span>{title}</span>
