@@ -20,7 +20,10 @@ export default function Navbar() {
           <NavLink
             style={styleLink}
             to="/"
-            onClick={() => setActive("HOME")}
+            onClick={() => {
+              setActive("HOME");
+              setHamburger(!hamburger);
+            }}
             className={`hamburger__box-option ${
               active === "HOME" ? "underlined__right" : ""
             }`}
@@ -31,7 +34,10 @@ export default function Navbar() {
           <NavLink
             style={styleLink}
             to="/destination"
-            onClick={() => setActive("DESTINATION")}
+            onClick={() => {
+              setActive("DESTINATION");
+              setHamburger(!hamburger);
+            }}
             className={`hamburger__box-option ${
               active === "DESTINATION" ? "underlined__right" : ""
             }`}
@@ -42,7 +48,10 @@ export default function Navbar() {
           <NavLink
             style={styleLink}
             to="/crew"
-            onClick={() => setActive("CREW")}
+            onClick={() => {
+              setActive("CREW");
+              setHamburger(!hamburger);
+            }}
             className={`hamburger__box-option ${
               active === "CREW" ? "underlined__right" : ""
             }`}
@@ -53,7 +62,10 @@ export default function Navbar() {
           <NavLink
             style={styleLink}
             to="/technology"
-            onClick={() => setActive("TECHNOLOGY")}
+            onClick={() => {
+              setActive("TECHNOLOGY");
+              setHamburger(!hamburger);
+            }}
             className={`hamburger__box-option ${
               active === "TECHNOLOGY" ? "underlined__right" : ""
             }`}

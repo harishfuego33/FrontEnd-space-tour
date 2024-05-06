@@ -195,7 +195,7 @@
   .technology-pricture-2 {
     display: initial;
     width: 100%;
-    height: 100%;
+    height: 90%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -306,5 +306,9 @@
   }
   .numbered-title {
     text-align: center;
+  }
+  .technology-pricture {
+    width: 100%;
+    height: 100%;
   }
 }
