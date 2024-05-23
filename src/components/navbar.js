@@ -3,14 +3,12 @@ import { Link, useResolvedPath, useMatch } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  // const [active, setActive] = useState("HOME");
   const [hamburger, setHamburger] = useState(true);
   const styleLink = {
     color: "white",
     textDecoration: "none",
     diplay: "block",
   };
-
   return (
     <>
       <div
